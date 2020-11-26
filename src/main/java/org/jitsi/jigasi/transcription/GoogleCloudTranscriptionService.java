@@ -268,6 +268,10 @@ public class GoogleCloudTranscriptionService
 
         // set the Language tag
         String languageTag = request.getLocale().toLanguageTag();
+        logger.debug("SET Language: " + languageTag.toString());
+        logger.debug("SET Language 1: " + languageTag);
+        languageTag = "fr-FR";
+        logger.debug("SET Language: " + languageTag);
         validateLanguageTag(languageTag);
         builder.setLanguageCode(languageTag);
 
